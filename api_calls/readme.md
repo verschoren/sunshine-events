@@ -4,8 +4,8 @@ Normally this has to be done via the Admin Panel by an Admin.
 All API calls are authenticated with an `admin@domain.com\token` and `Zendesk API token`
 
 # List Event Types
-- Type: GET
-- url: "/api/sunshine/metadata/events/types",
+- Type: `GET`
+- url: `/api/sunshine/metadata/events/types`
 
 ## Returned Data
 ```
@@ -35,7 +35,7 @@ All API calls are authenticated with an `admin@domain.com\token` and `Zendesk AP
 ```
 
 # Toggle visibility
-- Type: PUT
+- Type: `PUT`
 - URL: `/api/sunshine/metadata/events/types`
 
 ## Payload
