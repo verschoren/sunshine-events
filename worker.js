@@ -16,10 +16,9 @@ export default {
         return handleOptionsRequest(request)
       } else {
         const { pathname } = new URL(request.url);
-          //Get the incoming enquiry
-          var input = await request.json();
+          //Get the incoming payload   
+          var input = await request.json();        
           var user = await findUsers(input);
-          console.log(user);
           if (user.email){
             var event = await createEvent(user,input);
             return new Response(JSON.stringify(user), {headers: header_data,status:201});
@@ -85,12 +84,9 @@ async function createEvent(user,input){
     },
   };
   const response = await fetch(url, init);
-  console.log(response);
   const results = await response.json();
-  console.log(results);
   return results;
 }
-
 
 function handleOptionsRequest(request) {
   let headers = request.headers;
